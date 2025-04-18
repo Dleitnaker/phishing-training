@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phishing Examples</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Phishing Awareness Training</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Can You Spot the Phishing Red Flags?</h2>
+      <p>Click on the suspicious elements in the email below to learn why they may be dangerous.</p>
+
+      <div class="email-sample" id="email1">
+        <p><strong id="fakeSender">From:</strong> security@paypa1-support.com</p>
+        <p><strong>Subject:</strong> Immediate Action Required - Account Frozen</p>
+        <p>Hello,<br><br>
+        Your PayPal account has been temporarily locked due to suspicious activity. Please <a href="#" id="phishingLink">log in here</a> to confirm your identity.<br><br>
+        Thank you,<br>
+        PayPal Support Team</p>
+      </div>
+
+      <p id="emailFeedback"></p>
+    </section>
+
+    <section>
+      <h2>Which Email Is Real?</h2>
+      <p>Click on the image that you believe shows a legitimate Microsoft Outlook email.</p>
+
+      <div class="email-comparison">
+        <div class="email-image-wrapper">
+          <img src="assets/fake-email.jpg" alt="Fake Email Example" id="emailFake" class="email-img clickable-img">
+          <div class="hotspot" style="top: .5%; left: 35%;" data-tooltip="r n instead of m for microsoft "></div>
+          <div class="hotspot" style="top: 9%; left: 22%;" data-tooltip="Urgent language usage"></div>
+          <div class="hotspot" style="top: 45%; left: 81%;" data-tooltip="Grammer"></div>
+          <div class="hotspot" style="top: 60%; left: 40%;" data-tooltip="Unusual spacing"></div>
+          <div class="hotspot" style="top: 60%; left: 81%;" data-tooltip="Spelling"></div>
+          <div class="hotspot" style="top: 80%; left: 32%;" data-tooltip="Spelling"></div>
+        </div>
+
+        <div>
+          <img src="assets/real-email.jpg" alt="Real Email Example" id="emailReal" class="email-img clickable-img">
+        </div>
+      </div>
+
+      <p id="comparisonFeedback"></p>
+    </section>
+
+    <section id="phishing-generator">
+      <h2>Phishing Email Generator</h2>
+      <p>Build a phishing email and see how suspicious it looks.</p>
+
+      <form id="generatorForm">
+        <label for="sender">Choose a sender:</label>
+        <select id="sender">
+          <option value="security@update-support.com">security@update-support.com</option>
+          <option value="admin@company-email.com">admin@company-email.com</option>
+          <option value="helpdesk@it-alerts.net">helpdesk@it-alerts.net</option>
+        </select>
+
+        <label for="subject">Pick a subject line:</label>
+        <select id="subject">
+          <option value="Your account has been suspended">Your account has been suspended</option>
+          <option value="Immediate action required">Immediate action required</option>
+          <option value="Password expires today">Password expires today</option>
+        </select>
+
+        <label for="cta">Choose a call to action:</label>
+        <select id="cta">
+          <option value="Click here to verify your account">Click here to verify your account</option>
+          <option value="Reset your password now">Reset your password now</option>
+          <option value="Login to avoid deactivation">Login to avoid deactivation</option>
+        </select>
+
+        <button type="submit" class="btn">Generate Email</button>
+      </form>
+
+      <div id="generatedEmail" class="email-sample" style="display:none;"></div>
+      <p id="phishinessScore"></p>
+    </section>
+
+    <a href="quiz.html" class="btn">Next: Take the Quiz</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CyberSecure Co. | Phishing Awareness Training</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

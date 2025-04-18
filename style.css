@@ -1,0 +1,156 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2em;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+.email-sample {
+  background-color: #fff8e1;
+  border-left: 5px solid #ffa726;
+  padding: 1em;
+  border-radius: 6px;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.email-sample a {
+  color: #c62828;
+  text-decoration: underline;
+}
+
+#emailFeedback, #quizResult, #comparisonFeedback {
+  margin-top: 1em;
+  font-weight: bold;
+  color: #007e33;
+}
+
+.email-comparison {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+}
+
+.email-img {
+  width: 100%;
+  max-width: 400px;
+  height: 550px; 
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.email-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.email-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.hotspot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid red;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.2);
+  cursor: help;
+  display: none;
+}
+
+.hotspot::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 35px;
+  top: -5px;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  display: none;
+  z-index: 10;
+}
+
+.hotspot:hover::after {
+  display: block;
+}
+
+button, .btn {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #1565c0;
+}
+
+.quiz-question {
+  margin-bottom: 1.5em;
+}
+
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #f0f0f0;
+  color: #666;
+  margin-top: 2em;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}

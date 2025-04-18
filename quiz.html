@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Phishing Awareness Training</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Quick Quiz</h2>
+      <form id="quizForm">
+        <div class="quiz-question">
+          <p>1. What is a common sign of a phishing email?</p>
+          <label><input type="radio" name="q1" value="a"> An email from your friend</label><br>
+          <label><input type="radio" name="q1" value="b"> Urgent language and suspicious links</label><br>
+          <label><input type="radio" name="q1" value="c"> A birthday invitation</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>2. What should you do if you're unsure about a link?</p>
+          <label><input type="radio" name="q2" value="a"> Click it and hope for the best</label><br>
+          <label><input type="radio" name="q2" value="b"> Call the sender immediately</label><br>
+          <label><input type="radio" name="q2" value="c"> Hover over it or type the URL manually</label>
+        </div>
+
+        <div class="quiz-question">
+          <p>3. What makes a sender's email address suspicious?</p>
+          <label><input type="radio" name="q3" value="a"> It ends in .com</label><br>
+          <label><input type="radio" name="q3" value="b"> It’s a known business address</label><br>
+          <label><input type="radio" name="q3" value="c"> It has spelling errors or strange domains</label>
+        </div>
+
+        <button type="submit" class="btn">Submit Answers</button>
+      </form>
+
+      <p id="quizResult"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CyberSecure Co. | Phishing Awareness Training</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
