@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Awareness Certificate</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @media print {
+      header, footer, .no-print {
+        display: none;
+      }
+      body {
+        background-color: white;
+      }
+      .certificate {
+        border: 10px solid #003366;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>Phishing Awareness Training</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="examples.html">Examples</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <div class="certificate">
+      <h2>Certificate of Completion</h2>
+      <p>This certifies that</p>
+      <h3 id="certificateName">Learner</h3>
+      <p>has successfully completed the</p>
+      <h3>Phishing Awareness Training</h3>
+      <p>demonstrating the knowledge and skills necessary to identify and avoid phishing attacks</p>
+      
+      <div class="seal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      
+      <p>Date: <span id="certificateDate">April 23, 2025</span></p>
+      
+      <div class="signature">
+        CyberSecure Training
+      </div>
+    </div>
+    
+    <div class="no-print" style="text-align: center; margin-top: 2em;">
+      <button id="printCertificate" class="btn">Print Certificate</button>
+      <a href="index.html" class="btn" style="margin-left: 1em;">Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="training.html">Training</a>
+        <a href="examples.html">Examples</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+      <p>Phishing Awareness Training</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

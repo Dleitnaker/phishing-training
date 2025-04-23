@@ -20,6 +20,11 @@
   </header>
 
   <main>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <p class="progress-text">0% Complete</p>
+    
     <section>
       <h2>Can You Spot the Phishing Red Flags?</h2>
       <p>Click on the suspicious elements in the email below to learn why they may be dangerous.</p>
@@ -33,7 +38,7 @@
         PayPal Support Team</p>
       </div>
 
-      <p id="emailFeedback"></p>
+      <p id="emailFeedback" style="display: none;"></p>
     </section>
 
     <section>
@@ -56,7 +61,7 @@
         </div>
       </div>
 
-      <p id="comparisonFeedback"></p>
+      <p id="comparisonFeedback" style="display: none;"></p>
     </section>
 
     <section id="phishing-generator">
@@ -89,14 +94,22 @@
       </form>
 
       <div id="generatedEmail" class="email-sample" style="display:none;"></div>
-      <p id="phishinessScore"></p>
+      <p id="phishinessScore" style="display:none;"></p>
     </section>
 
     <a href="quiz.html" class="btn">Next: Take the Quiz</a>
   </main>
 
   <footer>
-    <p>&copy; Phishing Awareness Training</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="training.html">Training</a>
+        <a href="examples.html">Examples</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+      <p>Phishing Awareness Training</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>

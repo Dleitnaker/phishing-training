@@ -20,41 +20,83 @@
   </header>
 
   <main>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <p class="progress-text">0% Complete</p>
+    
     <section>
-      <h2>Quick Quiz</h2>
+      <h2>Test Your Knowledge</h2>
+      <p>Answer the following questions to test what you've learned about phishing awareness.</p>
+      
       <form id="quizForm">
         <div class="quiz-question">
           <p>1. What is a common sign of a phishing email?</p>
-          <label><input type="radio" name="q1" value="a"> An email from your friend</label><br>
-          <label><input type="radio" name="q1" value="b"> Urgent language and suspicious links</label><br>
-          <label><input type="radio" name="q1" value="c"> A birthday invitation</label>
+          <label><input type="radio" name="q1" value="a"> <span>An email from your friend</span></label><br>
+          <label><input type="radio" name="q1" value="b"> <span>Urgent language and suspicious links</span></label><br>
+          <label><input type="radio" name="q1" value="c"> <span>A birthday invitation</span></label>
         </div>
 
         <div class="quiz-question">
           <p>2. What should you do if you're unsure about a link?</p>
-          <label><input type="radio" name="q2" value="a"> Click it and hope for the best</label><br>
-          <label><input type="radio" name="q2" value="b"> Call the sender immediately</label><br>
-          <label><input type="radio" name="q2" value="c"> Hover over it or type the URL manually</label>
+          <label><input type="radio" name="q2" value="a"> <span>Click it and hope for the best</span></label><br>
+          <label><input type="radio" name="q2" value="b"> <span>Call the sender immediately</span></label><br>
+          <label><input type="radio" name="q2" value="c"> <span>Hover over it or type the URL manually</span></label>
         </div>
 
         <div class="quiz-question">
           <p>3. What makes a sender's email address suspicious?</p>
-          <label><input type="radio" name="q3" value="a"> It ends in .com</label><br>
-          <label><input type="radio" name="q3" value="b"> It’s a known business address</label><br>
-          <label><input type="radio" name="q3" value="c"> It has spelling errors or strange domains</label>
+          <label><input type="radio" name="q3" value="a"> <span>It ends in .com</span></label><br>
+          <label><input type="radio" name="q3" value="b"> <span>It's a known business address</span></label><br>
+          <label><input type="radio" name="q3" value="c"> <span>It has spelling errors or strange domains</span></label>
         </div>
 
         <button type="submit" class="btn">Submit Answers</button>
       </form>
 
-      <p id="quizResult"></p>
+      <p id="quizResult" style="display: none;"></p>
+      
+      <div style="text-align: center; margin-top: 2em;">
+        <button id="certificateBtn" class="btn" style="display: none;">Get Your Certificate</button>
+      </div>
+      
+      <div id="nameFormContainer" style="display: none; margin-top: 2em;">
+        <h3>Enter Your Name for the Certificate</h3>
+        <form id="nameForm">
+          <label for="userName">Your Name:</label>
+          <input type="text" id="userName" required>
+          <button type="submit" class="btn">Generate Certificate</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Phishing Awareness Training</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="training.html">Training</a>
+        <a href="examples.html">Examples</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+      <p>Phishing Awareness Training</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Show name form when certificate button is clicked
+    document.addEventListener("DOMContentLoaded", function() {
+      const certificateBtn = document.getElementById("certificateBtn");
+      const nameFormContainer = document.getElementById("nameFormContainer");
+      
+      if (certificateBtn && nameFormContainer) {
+        certificateBtn.addEventListener("click", function() {
+          nameFormContainer.style.display = "block";
+          nameFormContainer.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+    });
+  </script>
 </body>
 </html>

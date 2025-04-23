@@ -20,37 +20,60 @@
   </header>
 
   <main>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <p class="progress-text">0% Complete</p>
+    
     <section>
       <h2>What is Phishing?</h2>
       <p>Phishing is a form of cyber attack where attackers try to trick users into revealing sensitive information, such as passwords or financial details. This is usually done through fake emails, websites, or messages that appear legitimate.</p>
 
-      <h3>Common Phishing Tactics</h3>
-      <ul>
-        <li>Emails from fake senders posing as trusted companies</li>
-        <li>Links to malicious or lookalike websites</li>
-        <li>Urgent messages designed to panic the user into acting quickly</li>
-        <li>Attachments containing malware</li>
-      </ul>
-
-      <h3>How to Protect Yourself</h3>
-      <ul>
-        <li>Always check the sender's email address carefully</li>
-        <li>Hover over links to preview the actual URL</li>
-        <li>Don't open unexpected attachments</li>
-        <li>Enable spam filters and antivirus protection</li>
-        <li>Use multi-factor authentication (MFA) whenever possible</li>
-        <li>Report suspicious messages to your IT or security team</li>
-      </ul>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Common Phishing Tactics</h3>
+          <ul>
+            <li>Emails from fake senders posing as trusted companies</li>
+            <li>Links to malicious or lookalike websites</li>
+            <li>Urgent messages designed to panic the user into acting quickly</li>
+            <li>Attachments containing malware</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <h3>How to Protect Yourself</h3>
+          <ul>
+            <li>Always check the sender's email address carefully</li>
+            <li>Hover over links to preview the actual URL</li>
+            <li>Don't open unexpected attachments</li>
+            <li>Enable spam filters and antivirus protection</li>
+            <li>Use multi-factor authentication (MFA) whenever possible</li>
+            <li>Report suspicious messages to your IT or security team</li>
+          </ul>
+        </div>
+      </div>
 
       <h3>Real-World Example</h3>
-      <p>In 2020, attackers sent emails claiming to be from Microsoft, asking users to log in to review a shared document. The link led to a fake login page that stole user credentials. This is why it's critical to verify links and email sources.</p>
+      <div class="email-sample">
+        <p>In 2020, attackers sent emails claiming to be from Microsoft, asking users to log in to review a shared document. The link led to a fake login page that stole user credentials. This is why it's critical to verify links and email sources.</p>
+      </div>
 
       <a href="examples.html" class="btn">Try Examples</a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; Phishing Awareness Training</p>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="training.html">Training</a>
+        <a href="examples.html">Examples</a>
+        <a href="quiz.html">Quiz</a>
+      </div>
+      <p>Phishing Awareness Training</p>
+    </div>
   </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
