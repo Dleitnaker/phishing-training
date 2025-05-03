@@ -162,13 +162,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (quizForm) {
     quizForm.addEventListener("submit", (e) => {
-      e.preventDefault()
+      e.preventDefault() 
+      const quizUserName = document.getElementById("quizUserName");
+      if (quizUserName && quizUserName.value.trim() !== "") {
+        localStorage.setItem("userName", quizUserName.value.trim());
+      }
+      
 
       const answers = {
         q1: "b",
         q2: "c",
         q3: "c",
+        q4: "b",
+        q5: "c",
+        q6: "b",
+        q7: "b",
       }
+      
 
       let score = 0
       for (const key in answers) {
@@ -199,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Show certificate button if score is good
       const certificateBtn = document.getElementById("certificateBtn")
       if (certificateBtn) {
-        if (score >= 2) {
+        if (score >= 5) {
           certificateBtn.style.display = "inline-block"
           certificateBtn.classList.add("fade-in")
         } else {
